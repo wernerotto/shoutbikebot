@@ -1,0 +1,72 @@
+{
+    "sampleUtterances": [
+        "Can I buy the wheels",
+        "Can I rent some wheels",
+        "I would like to order the wheels",
+        "I want wheels",
+        "I want carbon wheelset",
+        "I want climbing wheels",
+        "I want light wheels",
+        "I want fast wheels"
+    ],
+    "slots": [
+        {
+            "slotType": "WheelTypes",
+            "name": "WheelType",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+                "maxAttempts": 2,
+                "messages": [
+                    {
+                        "content": "Tell me which wheels you want?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            },
+            "priority": 1,
+            "slotTypeVersion": "$LATEST",
+            "sampleUtterances": [
+                "I want {WheelType}"
+            ],
+            "description": "Tell me which wheels you want?"
+        },
+        {
+            "slotType": "AMAZON.DATE",
+            "name": "DeliveryDate",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+                "maxAttempts": 2,
+                "messages": [
+                    {
+                        "content": "When can I deliver your {WheelType}?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            },
+            "priority": 2,
+            "description": "The date for the delivery of the purchase order"
+        }
+    ],
+    "confirmationPrompt": {
+        "maxAttempts": 2,
+        "messages": [
+            {
+                "content": "Okay, your {WheelType} will be for delivered on {DeliveryDate}. Does this sound okay?",
+                "contentType": "PlainText"
+            }
+        ]
+    },
+    "name": "Wheels",
+    "rejectionStatement": {
+        "messages": [
+            {
+                "content": "Okay, I will not continue.",
+                "contentType": "PlainText"
+            }
+        ]
+    },
+    "fulfillmentActivity": {
+        "type": "ReturnIntent"
+    },
+    "description": "Intent to order a wheelset to be delivered"
+}

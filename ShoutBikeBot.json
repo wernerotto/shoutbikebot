@@ -1,0 +1,31 @@
+{
+    "intents": [
+        {
+            "intentVersion": "$LATEST",
+            "intentName": "GetWheels"
+        }
+    ],
+    "name": "ShoutBikeBot",
+    "locale": "en-US",
+    "abortStatement": {
+        "messages": [
+            {
+                "content": "Sorry, I'm not able to assist at this time, please give us a call at: +353871151340 if you need further assistance",
+                "contentType": "PlainText"
+            }
+        ]
+    },
+    "clarificationPrompt": {
+        "maxAttempts": 2,
+        "messages": [
+            {
+                "content": "I didn't understand you, what would you like to do?",
+                "contentType": "PlainText"
+            }
+        ]
+    },
+    "voiceId": "Salli",
+    "childDirected": false,
+    "idleSessionTTLInSeconds": 600,
+    "description": "ShoutBike's Carbon Wheel Services"
+}

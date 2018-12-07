@@ -1,0 +1,27 @@
+{
+    "enumerationValues": [
+        {
+            "value": "ShoutBike MVP-30 Front"
+        },
+        {
+            "value": "ShoutBike MVP-30 Rear"
+        },
+        {
+            "value": "ShoutBike MVP-40 Front"
+        },
+        {
+            "value": "ShoutBike MVP-40 Rear"
+        },
+        {
+            "value": "ShoutBike MVP-80 Front"
+        },
+        {
+            "value": "ShoutBike MVP-80 Rear"
+        },
+        {
+            "value":"ShoutBike MVP-Disc Rear only"
+        }
+    ],
+    "name": "WheelTypes",
+    "description": "These are the wheels we have on offer for buying and renting."
+}
